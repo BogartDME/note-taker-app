@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-
-function makeNewNote(body, notes) {
+function createNewNote(body, notes) {
     const note = body;
     notes.push(note);
     fs.writeFileSync(
@@ -10,8 +9,6 @@ function makeNewNote(body, notes) {
     );
     return note;
 }
-
-
 module.exports = {
-    makeNewNote,
+    createNewNote,
 };

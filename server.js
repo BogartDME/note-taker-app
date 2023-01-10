@@ -1,8 +1,9 @@
 const express = require('express');
 const api = require('./routes/api')
 const html = require('./routes/html')
-const PORT = process.env.port || 3001;
 const app = express();
+const path = require('path');
+const PORT = process.env.PORT || 3001;
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
