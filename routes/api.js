@@ -13,7 +13,7 @@ router.get("/notes", (req, res) => {
 router.post("/notes", (req, res) => {
     let noteID = uniqueID();
     const noteInfo = JSON.parse(fs.readFileSync("./db/db.json"));
-    res,json(noteInfo)
+    res.json(noteInfo)
     console.log(noteID);
 
     const userInput = {
